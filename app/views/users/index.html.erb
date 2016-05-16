@@ -1,22 +1,15 @@
-Create a simple app that implements paper clip to allow a user to upload a file (like a profile photo or a pdf copy of a resume). The app only needs to have one model (user).
-
- 
-
-Do not use Devise
-
- 
-
-Push your answer to a new repo on github and submit the link.
 
 
-<% @users.each do |user| %>
-	<div class="user-profile">
-		<%= image_tag user.avatar(:thumb) %>
-		<%= user.name %>
-		<%= user.bio %>
-	</div>
-	<br />
-<% end %>
+<div id="index-container">
+	<% @users.each do |user| %>
+		<div class="user-profile">
+			<p><%= image_tag user.avatar(:thumb) %></p>
+			<p><%= user.name %></p>
+			<p><%= user.bio %></p>
+		</div>
+		<br />
+	<% end %>
+</div>
 
 
 <%= link_to "New User", new_user_path %>
