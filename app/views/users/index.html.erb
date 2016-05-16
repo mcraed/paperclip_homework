@@ -1,4 +1,23 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+Create a simple app that implements paper clip to allow a user to upload a file (like a profile photo or a pdf copy of a resume). The app only needs to have one model (user).
 
+ 
+
+Do not use Devise
+
+ 
+
+Push your answer to a new repo on github and submit the link.
+
+
+<% @users.each do |user| %>
+	<div class="user-profile">
+		<%= image_tag user.avatar(:thumb) %>
+		<%= user.name %>
+		<%= user.bio %>
+	</div>
+	<br />
+<% end %>
+
+
+<%= link_to "New User", new_user_path %>
 
